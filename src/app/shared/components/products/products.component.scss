@@ -1,0 +1,13 @@
+.card-body p{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    width: 80%;
+}
+
+.card-header p{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    // width: 80%;
+}

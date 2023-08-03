@@ -1,0 +1,32 @@
+<div class="container">
+    <h2 class="bg-info text-white text-center p-3">ellipsis use-case </h2>
+    <div class="row ">
+
+        <div class="col-md-4" *ngFor="let s of postArray; index as i">
+            <div class="card mb-4 mt-4">
+                <div class="card-header text-white" 
+                [ngClass]="{
+                    'bg-success' : (i+1) % 2 ===0,
+                    'bg-info'   : (i+1) % 2 !==0
+                }"
+                >
+                    <p>{{s.title}}</p>
+                </div>
+                <div class="card-body ">
+                    <p>{{s.body}}</p>
+                  
+
+                </div>
+                <div class="card-footer d-flex justify-content-between"
+                [ngClass]="{
+                    'bg-warning' : (i+1) % 2 ===0,
+                    'bg-dark'  : (i+1)  % 2  !== 0
+                }"
+                >
+                    <button class="btn btn-primary">edit</button>
+                    <button class="btn btn-danger">delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
